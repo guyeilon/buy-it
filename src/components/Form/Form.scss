@@ -1,0 +1,109 @@
+.app__product-card {
+	display: flex;
+	flex-direction: row;
+	margin: 0.5rem auto;
+	// width: 100%;
+	width: 500px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
+	padding: 0.75rem;
+	gap: 5px;
+
+	@media only screen and (max-width: 720px) {
+		flex-direction: column;
+		width: 250px;
+	}
+}
+
+.app__product-img {
+	width: 100px;
+	flex: 1;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin: 0 auto;
+
+	img {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+.app__product-form {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.app__input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	& + .app__input {
+		margin-top: 1.5rem;
+	}
+}
+
+.app__input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: 0.25s ease;
+}
+
+.app__input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee;
+	font: inherit;
+	font-size: 1.125rem;
+	padding: 0.25rem 0;
+
+	&:focus,
+	&:valid {
+		outline: 0;
+		border-bottom-color: #6658d3;
+		& + .app__input-label {
+			color: #6658d3;
+			transform: translateY(-1.5rem);
+		}
+	}
+}
+
+.app__form-active {
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.app__form-save-button {
+	cursor: pointer;
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1rem;
+	width: 100%;
+	font-weight: 500;
+	background-color: #6658d3;
+	border-radius: 6px;
+	color: #fff;
+	border: 0;
+	&:focus {
+		outline: 0;
+	}
+
+	&:disabled {
+		background-color: #9083f3;
+		cursor: default;
+	}
+}
+
+.app__modal-title {
+	text-align: center;
+	font-size: 2rem;
+}

@@ -1,0 +1,76 @@
+.app__product-item {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 2fr 1fr 1fr;
+	column-gap: 0.5rem;
+	margin: 2rem 0 1rem 0;
+	border-top: 1px solid rgb(187, 187, 187);
+	padding: 1rem 0;
+
+	.app__product-details {
+		display: flex;
+
+		.app__img-wrapper {
+			width: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media only screen and (max-width: 720px) {
+				width: 0px;
+			}
+
+			img {
+				max-width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		h3 {
+			font-weight: bold;
+		}
+	}
+
+	.app__product-image {
+		@media only screen and (max-width: 720px) {
+			display: none;
+		}
+	}
+
+	.app__product-dec-container {
+		margin-left: 1rem;
+		max-width: 400px;
+		@media only screen and (max-width: 720px) {
+			margin-left: 0rem;
+		}
+	}
+
+	.app__product-edit {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 10px;
+
+		@media only screen and (max-width: 720px) {
+			flex-direction: column;
+		}
+
+		button {
+			width: 100%;
+			height: 40px;
+			border-radius: 5px;
+			font-weight: 400;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			color: white;
+			letter-spacing: 1.15px;
+			font-size: 1rem;
+		}
+		.button__edit-product {
+			background-color: #4b70e2;
+		}
+		.button__delete-product {
+			background-color: #e24b4b;
+		}
+	}
+}

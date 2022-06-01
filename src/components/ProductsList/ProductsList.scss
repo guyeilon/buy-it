@@ -1,0 +1,68 @@
+.app__products-container {
+	padding: 2rem 4rem;
+	display: flex;
+	flex-direction: column;
+	@media only screen and (max-width: 720px) {
+		padding: 1rem 2rem;
+	}
+
+	h2 {
+		font-weight: 400;
+		font-size: 30px;
+		text-align: center;
+	}
+}
+
+.app__table-container {
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+	> * {
+		grid-column: 2;
+	}
+
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and (max-width: 1380px) {
+		grid-template-columns: 1fr 4fr 1fr;
+	}
+	@media only screen and (max-width: 720px) {
+		grid-template-columns: 1px 1fr 1px;
+	}
+}
+
+.app__products-titles {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 2fr 1fr 1fr;
+	column-gap: 0.5rem;
+	margin: 2rem 0 1rem 0;
+
+	h3 {
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	.edit {
+		text-align: center;
+	}
+}
+
+.app__add-product {
+	& button {
+		width: 100px;
+		height: 40px;
+		border-radius: 5px;
+		font-weight: 400;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		color: white;
+		background-color: #4b70e2;
+		letter-spacing: 1.15px;
+		font-size: 1rem;
+		float: right;
+		margin-right: 0.5rem;
+	}
+}

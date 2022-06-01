@@ -1,0 +1,24 @@
+.app__container {
+	width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.app__flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.p-text {
+	font-size: 0.8rem;
+	text-align: left;
+	color: var(--gray-color);
+	line-height: 1.5;
+
+	@media screen and (min-width: 2000px) {
+		font-size: 1.75rem;
+	}
+}
